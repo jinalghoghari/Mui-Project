@@ -8,7 +8,7 @@ import RightBar from "./components/RightBar";
 import Add from "./components/Add";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("dark");
 
   const darkTheme = createTheme({
     palette: {
@@ -17,15 +17,15 @@ function App() {
   });
   return (
     <ThemeProvider theme={darkTheme}>
-   <Box bgcolor={"background.default"} color={"text.primary"}>
-      <Navbar />
-      <Stack direction="row" spacing={2} justifyContent="space-between">
-        <Slidbar setMode={setMode} mode={mode}/>
-        <Feed />
-        <RightBar />
-      </Stack>
-      <Add />
-    </Box>
+      <Box bgcolor={"background.default"} color={"text.primary"}>
+        <Navbar />
+        <Stack direction="row" spacing={2} justifyContent="space-between">
+          <Slidbar setMode={setMode} mode={mode} />
+          <Feed />
+          <RightBar />
+        </Stack>
+        <Add />
+      </Box>
     </ThemeProvider>
   );
 }

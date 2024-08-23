@@ -4,6 +4,7 @@ import {
   Button,
   ButtonGroup,
   Fab,
+  IconButton,
   Modal,
   Stack,
   TextField,
@@ -19,6 +20,7 @@ import ImageIcon from "@mui/icons-material/Image";
 import VideoCameraBackIcon from "@mui/icons-material/VideoCameraBack";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import DateRangeIcon from "@mui/icons-material/DateRange";
+import CloseIcon from '@mui/icons-material/Close';
 
 const SytledModal = styled(Modal)({
   display: "flex",
@@ -44,6 +46,7 @@ const Add = () => {
           position: "fixed",
           bottom: 20,
           left: { xs: "calc(50% - 25px)", md: 30 },
+          zIndex: 1200
         }}
       >
         <Fab color="primary" aria-label="add">
@@ -63,10 +66,25 @@ const Add = () => {
           color={"text.primary"}
           p={3}
           borderRadius={3}
+          position="relative"
         >
+           <IconButton
+            onClick={() => setOpen(false)}
+            sx={{
+              position: "absolute",
+              top: 10,
+              right: 10,
+              color: "text.primary" 
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+
+           
           <Typography variant="h6" color="gray" textAlign="center">
             Create Post
           </Typography>
+         
           <UserBox>
             <Avatar
               sx={{ height: 40, width: 40 }}

@@ -1,4 +1,4 @@
-import { Favorite, FavoriteBorder, MoreVert, Share } from "@mui/icons-material";
+import { Favorite, FavoriteBorder,  Share } from "@mui/icons-material";
 import {
   Avatar,
   Card,
@@ -35,7 +35,7 @@ const Post = () => {
       <CardMedia
         component="img"
         height="20%"
-        image="https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        image="https://images.unsplash.com/photo-1549281899-f75600a24107?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8"
         alt="Paella dish"
       />
       <CardContent>
